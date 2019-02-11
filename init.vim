@@ -31,6 +31,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 
+Plug 'scrooloose/nerdtree'
+
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'
 Plug 'slashmili/alchemist.vim'
@@ -73,6 +75,7 @@ Plug 'ncm2/ncm2-ultisnips'
 " NEOS/Fusion (WIP!)
 "Plug 'felbit/neos-fusion.vim'
 
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 syntax enable
@@ -100,5 +103,6 @@ augroup END
 let g:neomake_markdown_enabled_makers = []
 
 source $HOME/.config/nvim/config/elixir.vimrc
+source $HOME/.config/nvim/config/html.vimrc
 source $HOME/.config/nvim/config/php.vimrc
 
