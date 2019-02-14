@@ -1,10 +1,10 @@
 set mouse=""
 
 " eight spaces hard tabs will drive me to drinking
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=4
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 
 let g:mapleader="\<space>"
 
@@ -31,18 +31,15 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'scrooloose/nerdtree'
-
-Plug 'c-brenn/phoenix.vim'
-Plug 'tpope/vim-projectionist'
-Plug 'slashmili/alchemist.vim'
-
-Plug 'vim-erlang/vim-erlang-runtime'
-
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'vimwiki/vimwiki'
+
+Plug 'SirVer/ultisnips' | Plug 'phux/vim-snippets'
 
 " Colors!
 Plug 'tomasr/molokai'
@@ -50,7 +47,15 @@ Plug 'schickele/vim-nachtleben'
 Plug 'semibran/vim-colors-synthetic'
 Plug 'morhetz/gruvbox'
 
-Plug 'SirVer/ultisnips' | Plug 'phux/vim-snippets'
+" Erlang & Elixir/Phoenix
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist'
+Plug 'slashmili/alchemist.vim'
+Plug 'vim-erlang/vim-erlang-runtime'
+
+" JavaScript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " Clojure
 " ... wait? Clojure?! What about Emacs?
@@ -75,7 +80,11 @@ Plug 'ncm2/ncm2-ultisnips'
 " NEOS/Fusion (WIP!)
 "Plug 'felbit/neos-fusion.vim'
 
+" HTML
 Plug 'alvan/vim-closetag'
+
+" JS
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 syntax enable
@@ -102,6 +111,17 @@ augroup localneomake
 augroup END
 let g:neomake_markdown_enabled_makers = []
 
+" Normal mode in terminal emulator
+:tnoremap <Esc> <C-\><C-n>
+
+" Move between open windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Pomodoro thymer
+nnoremap <leader>t :!thyme -d<cr>
 source $HOME/.config/nvim/config/elixir.vimrc
 source $HOME/.config/nvim/config/html.vimrc
 source $HOME/.config/nvim/config/php.vimrc
