@@ -38,8 +38,15 @@ Plug 'scrooloose/nerdtree'
 Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'vimwiki/vimwiki'
+Plug 'wakatime/vim-wakatime'
 
 Plug 'SirVer/ultisnips' | Plug 'phux/vim-snippets'
+
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-eunuch'
+Plug 'mattn/emmet-vim'
+Plug 'airblade/vim-gitgutter'
+
 
 " Colors!
 Plug 'tomasr/molokai'
@@ -75,13 +82,15 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'phpactor/phpactor', { 'do': ':call phpactor#Update()', 'for': 'php'}
 Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
-Plug 'ncm2/ncm2-ultisnips'
+"Plug 'ncm2/ncm2-ultisnips'
 
 " NEOS/Fusion (WIP!)
 "Plug 'felbit/neos-fusion.vim'
 
 " HTML
-Plug 'alvan/vim-closetag'
+" vim-closetag slows down PHP/Flow because of the weird <f:...> tags.
+" Maybe those tags can be added to the known list of tags?
+"Plug 'alvan/vim-closetag'
 
 " JS
 Plug 'pangloss/vim-javascript'
